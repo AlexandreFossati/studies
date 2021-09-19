@@ -1,0 +1,43 @@
+/*
+ * Begin of styles for SmartTable
+ */
+
+.tinyButtons .sapMBtn {
+    height: 1.6rem;
+    padding: 1px 6px;
+}
+
+.tinyButtons .sapMBtnInner {
+    height: 1.2rem;
+    min-width: 1.2rem;
+}
+
+.tinyButtons .sapMBtnIcon {
+    width: 1.3rem;
+    font-size: 1rem;
+    line-height: 1rem;
+}
+
+.btnTinyLineHeight .sapMBtnIcon {
+    line-height: 0.9rem;
+}
+
+.smallRow .sapUiTableTr {
+    height: 1.6rem !important;
+}
+
+.smallRow .sapUiTableCell {
+    height: 1.6rem;
+}
+
+.smallRow .sapUiTableCellInner {
+    height: auto;
+}
+
+.smallRow .sapUiTableCCnt {
+    min-height: auto !important;
+}
+
+/*
+ * End of styles for SmartTable
+ */

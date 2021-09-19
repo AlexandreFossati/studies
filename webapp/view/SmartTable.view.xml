@@ -1,0 +1,66 @@
+<mvc:View
+    controllerName="namespace.studies.controller.SmartTable"
+    xmlns:smartTable="sap.ui.comp.smarttable"
+    xmlns:table="sap.ui.table"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:core="sap.ui.core"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+	<Page title="Smart Table">
+        <smartTable:SmartTable 
+            id="smartTable" 
+            entitySet="Customers"
+            header="Customers"
+            persistencyKey="SmartTableAnalytical_Explored"
+            enableAutoBinding="true"
+            enableAutoColumnWidth="true"
+            useTablePersonalisation="true"
+            useVariantManagement="false"
+            requestAtLeastFields="CustomerID"
+            initiallyVisibleFields="CompanyName,ContactName,Country,Phone"
+        >
+            <table:Table class="smallRow">
+
+                <!-- Column 0 -->
+                <table:Column id="ButtonsColumn" width="5.5rem">
+                    <table:customData>
+						<core:CustomData key="p13nData"
+                            value='\{ 
+                                "columnKey": "ButtonsColumn",
+                                "columnIndex": 0 
+                            }' />
+					</table:customData>
+                    <Label text="Actions" />
+                    <table:template>
+                        <HBox renderType="Bare" class="tinyButtons">
+                            <Button class="btnTinyLineHeight" icon="sap-icon://display" tooltip="display" press="onDisplayPress"/>
+                            <Button icon="sap-icon://edit" tooltip="edit" press="onEditPress"/>
+                        </HBox>
+                    </table:template>
+                </table:Column>
+
+                <!-- Column 1 -->
+                <table:Column id="CustomerID" width="5rem">
+                    <table:customData>
+						<core:CustomData key="p13nData"
+                            value='\{
+                                "columnKey": "CustomerID", 
+                                "sortProperty": "CustomerID", 
+                                "filterProperty": "CustomerID",
+                                "leadingProperty": "CustomerID",
+                                "columnIndex": 1
+                            }'/>
+					</table:customData>
+                    <Label text="ID" />
+                    <table:template>
+                        <Text text="{CustomerID}" />
+                    </table:template>
+                </table:Column>
+
+            </table:Table>
+
+        </smartTable:SmartTable>
+        
+	</Page>
+</mvc:View>

@@ -1,0 +1,21 @@
+<mvc:View
+    controllerName="namespace.studies.controller.Root"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns:tnt="sap.tnt"
+    xmlns="sap.m"
+>
+	<tnt:ToolPage>
+        <tnt:sideContent>
+            <tnt:SideNavigation itemSelect="onSelectItem">
+                <tnt:NavigationList>
+                    <tnt:NavigationListItem key="SmartTable" text="Smart Table"/>
+                    <tnt:NavigationListItem key="MessagePopover" text="Message Popover"/>
+                </tnt:NavigationList>
+            </tnt:SideNavigation>
+        </tnt:sideContent>
+        <tnt:mainContents>
+            <NavContainer id="navContainer" />
+        </tnt:mainContents>
+    </tnt:ToolPage>
+</mvc:View>

@@ -1,0 +1,19 @@
+<mvc:View
+    controllerName="namespace.studies.controller.MessagePopover"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+	<Page title="Message Popover">
+        <footer>
+            <Toolbar>
+                <Button text="Open Message Popover" press="onOpenPopover">
+                    <dependents>
+                        <MessagePopover id="popover">
+                        </MessagePopover>
+                    </dependents>
+                </Button>
+            </Toolbar>
+        </footer>
+    </Page>
+</mvc:View>
