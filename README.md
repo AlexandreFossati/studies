@@ -3,6 +3,7 @@
 
 ## About the app generation
 |               |
+| ------------- |
 |**App Generator**<br>@sap/generator-fiori|
 |**App Generator Version**<br>1.3.1|
 |**Generation Platform**<br>CLI|
