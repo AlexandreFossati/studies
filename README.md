@@ -1,23 +1,16 @@
-## Application Details
+## General project description
+-   This app contains studies about general and useful UI5 elements/controls.  
+
+## About the app generation
 |               |
-| ------------- |
-|**Generation Date and Time**<br>Fri Aug 27 2021 19:46:10 GMT-0300 (Horário Padrão de Brasília)|
 |**App Generator**<br>@sap/generator-fiori|
 |**App Generator Version**<br>1.3.1|
 |**Generation Platform**<br>CLI|
-|**Floorplan Used**<br>simple|
-|**Service Type**<br>None|
-|**Service URL**<br>N/A
 |**Module Name**<br>studies|
 |**Application Title**<br>General UI5 Studies|
 |**Namespace**<br>namespace|
 |**UI5 Theme**<br>sap_fiori_3|
 |**UI5 Version**<br>Latest|
-|**Enable Telemetry**<br>True|
-
-## studies
-
-A fiori test application
 
 ### Starting the generated app
 
@@ -26,10 +19,3 @@ A fiori test application
 ```
     npm start
 ```
-
-#### Pre-requisites:
-
-1. Active NodeJS LTS (Long Term Support) version and associated supported NPM version.  (See https://nodejs.org)
-
-
-"# studies" 
