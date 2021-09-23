@@ -84,6 +84,11 @@
           "name": "RouteMessagePopover",
           "pattern": "MessagePopover",
           "target": ["TargetMessagePopover"]
+        },
+        {
+          "name": "RouteODataModel",
+          "pattern": "ODataModel",
+          "target": ["TargetODataModel"]
         }
       ],
       "targets": {
@@ -92,6 +97,9 @@
         },
         "TargetMessagePopover": {
           "viewName": "MessagePopover"
+        },
+        "TargetODataModel": {
+          "viewName": "ODataModel"
         }
       }
     }

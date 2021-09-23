@@ -1,0 +1,10 @@
+<mvc:View
+    controllerName="namespace.studies.controller.ODataModel"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+	<Page title="OData Model">
+        <Text text="" />
+    </Page>
+</mvc:View>

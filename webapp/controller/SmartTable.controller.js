@@ -21,8 +21,10 @@ sap.ui.define([
 
 				MessageToast.show(`Falta implementar:\n
 					- VER COMO ADICIONAR UMA CUSTOM COLUMN NOS FILTROS DA SMART TABLE
-					- VER COMO FAZER SMART TABLE COM JSON MODEL
+					- VER COMO FAZER SMART TABLE COM JSON MODEL (o link com a referência está no controller)
 					- CRIAR MESSAGE POPOVER`)
+
+				/* https://blogs.sap.com/2019/06/26/enable-crud-operations-in-smart-table-sapui5 */
 			},
 
 			onDisplayPress: function(event) {

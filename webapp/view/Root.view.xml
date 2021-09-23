@@ -11,6 +11,7 @@
                 <tnt:NavigationList>
                     <tnt:NavigationListItem key="SmartTable" text="Smart Table"/>
                     <tnt:NavigationListItem key="MessagePopover" text="Message Popover"/>
+                    <tnt:NavigationListItem key="ODataModel" text="OData Model"/>
                 </tnt:NavigationList>
             </tnt:SideNavigation>
         </tnt:sideContent>
