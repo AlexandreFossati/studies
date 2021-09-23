@@ -5,6 +5,17 @@
     xmlns="sap.m"
 >
 	<Page title="OData Model">
-        <Text text="" />
+        <List items="{/Products}">
+            <headerToolbar>
+                <Toolbar>
+                    <Title text="Northwind Data" />
+                    <ToolbarSpacer />
+                    <Button text="Create" press="openCreateDialog"/>
+                </Toolbar>
+            </headerToolbar>
+            <items>
+                <StandardListItem title="ID: {ID}" info="Rating: {Rating}"/>
+            </items>
+        </List>
     </Page>
 </mvc:View>

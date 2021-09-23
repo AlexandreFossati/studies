@@ -1,0 +1,14 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core" >
+    <Dialog id="createDialog" title="Create new entry">
+        <VBox alignItems="End" renderType="Bare" class="sapUiSmallMargin" >
+            <Input placeholder="ID" />
+            <Input placeholder="Rating" />
+            <HBox class="sapUiSmallMarginTop" >
+                <Button text="Cancel" press="onCancelCreate" type="Transparent" class="sapUiSmallMarginEnd" />
+                <Button text="Confirm" press="onConfirmCreate" type="Success" />
+            </HBox>
+        </VBox>
+    </Dialog>
+</core:FragmentDefinition>
