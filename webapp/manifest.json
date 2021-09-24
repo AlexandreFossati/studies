@@ -76,17 +76,17 @@
       },
       "routes": [
         {
-          "name": "RouteSmartTable",
+          "name": "Smart_Table",
           "pattern": "",
           "target": ["TargetSmartTable"]
         },
         {
-          "name": "RouteMessagePopover",
+          "name": "Message_Popover",
           "pattern": "MessagePopover",
           "target": ["TargetMessagePopover"]
         },
         {
-          "name": "RouteODataModel",
+          "name": "OData_Model",
           "pattern": "ODataModel",
           "target": ["TargetODataModel"]
         }

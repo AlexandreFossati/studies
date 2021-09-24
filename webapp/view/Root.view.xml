@@ -8,10 +8,8 @@
 	<tnt:ToolPage>
         <tnt:sideContent>
             <tnt:SideNavigation itemSelect="onSelectItem">
-                <tnt:NavigationList>
-                    <tnt:NavigationListItem key="SmartTable" text="Smart Table"/>
-                    <tnt:NavigationListItem key="MessagePopover" text="Message Popover"/>
-                    <tnt:NavigationListItem key="ODataModel" text="OData Model"/>
+                <tnt:NavigationList items="{navigationList>/}">
+                    <tnt:NavigationListItem key="{navigationList>route}" text="{navigationList>name}"/>
                 </tnt:NavigationList>
             </tnt:SideNavigation>
         </tnt:sideContent>
