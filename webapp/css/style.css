@@ -2,6 +2,10 @@
  * Begin of styles for SmartTable
  */
 
+/* .sapUiCompVarMngmt .sapMBarChild {
+    display: 'none';
+} */
+
 .tinyButtons .sapMBtn {
     height: 1.6rem;
     padding: 1px 6px;

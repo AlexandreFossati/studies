@@ -1,5 +1,6 @@
 <mvc:View
     controllerName="namespace.studies.controller.SmartTable"
+	xmlns:smartFilterBar="sap.ui.comp.smartfilterbar"
     xmlns:smartTable="sap.ui.comp.smarttable"
     xmlns:table="sap.ui.table"
     xmlns:mvc="sap.ui.core.mvc"
@@ -8,17 +9,37 @@
     xmlns="sap.m"
 >
 	<Page title="Smart Table">
+        <smartFilterBar:SmartFilterBar 
+            id="smartFilterBar" 
+            entitySet="Customers" 
+            persistencyKey="SmartFilter_Explored"
+            considerSelectionVariants="false"
+        >
+            <smartFilterBar:controlConfiguration>
+                <smartFilterBar:ControlConfiguration key="CustomerID" visibleInAdvancedArea="true" label="ID"/>
+                <smartFilterBar:ControlConfiguration key="CompanyName" visibleInAdvancedArea="true" label="Company Name" />
+                <smartFilterBar:ControlConfiguration key="ContactName" visibleInAdvancedArea="true" label="Contact Name"/>
+                <smartFilterBar:ControlConfiguration key="Country" visibleInAdvancedArea="true" label="Country"/>
+            </smartFilterBar:controlConfiguration>
+            <!-- layout data used to make the table growing but the filter bar fixed -->
+            <smartFilterBar:layoutData>
+                <FlexItemData shrinkFactor="0"/>
+            </smartFilterBar:layoutData>
+        </smartFilterBar:SmartFilterBar>
+
         <smartTable:SmartTable 
-            id="smartTable" 
+            id="smartTable"
+            smartFilterId="smartFilterBar"
             entitySet="Customers"
             header="Customers"
-            persistencyKey="SmartTableAnalytical_Explored"
+            beforeRebindTable="beforeRebindTable"
             enableAutoBinding="true"
             enableAutoColumnWidth="true"
             useTablePersonalisation="true"
             useVariantManagement="false"
             requestAtLeastFields="CustomerID"
             initiallyVisibleFields="CompanyName,ContactName,Country,Phone"
+            class="mySmartTable"
         >
             <table:Table class="smallRow">
 

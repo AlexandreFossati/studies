@@ -27,6 +27,18 @@ sap.ui.define([
 				/* https://blogs.sap.com/2019/06/26/enable-crud-operations-in-smart-table-sapui5 */
 			},
 
+			onAfterRendering: function() {				
+				setInterval(() => {
+					this.hideElement('sapMBtnBase sapMBtn sapUiCompSmartTableToolbarContent sapMBarChild')
+					this.hideElement('sapUiCompVarMngmt sapMBarChild')
+				}, 1)
+			},
+			
+			hideElement: function(className) {
+				let elements = document.getElementsByClassName(className)
+				if(elements && elements.length > 0) elements[0].style.display = 'none'
+			},
+
 			onDisplayPress: function(event) {
 				MessageToast.show("display")
 			},
