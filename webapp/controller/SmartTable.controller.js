@@ -3,12 +3,13 @@ sap.ui.define([
 	"sap/ui/model/odata/v2/ODataModel",
 	"sap/ui/model/json/JSONModel",
 	"sap/m/MessageToast",
-	"sap/m/MessageBox"
+	"sap/m/MessageBox",
+	"sap/ui/core/Fragment"
 ],
 	/**
 	 * @param {typeof sap.ui.core.mvc.Controller} Controller
 	 */
-	function (Controller, ODataModel, JSONModel, MessageToast, MessageBox) {
+	function (Controller, ODataModel, JSONModel, MessageToast, MessageBox, Fragment) {
 		"use strict";
 
 		return Controller.extend("namespace.studies.controller.SmartTable", {
@@ -20,31 +21,33 @@ sap.ui.define([
 				this.getView().byId("smartTable").getTable().setSelectionMode("None")
 
 				MessageToast.show(`Falta implementar:\n
-					- VER COMO ADICIONAR UMA CUSTOM COLUMN NOS FILTROS DA SMART TABLE
 					- VER COMO FAZER SMART TABLE COM JSON MODEL (o link com a referência está no controller)
 					- CRIAR MESSAGE POPOVER`)
 
 				/* https://blogs.sap.com/2019/06/26/enable-crud-operations-in-smart-table-sapui5 */
 			},
-
-			onAfterRendering: function() {				
-				setInterval(() => {
-					this.hideElement('sapMBtnBase sapMBtn sapUiCompSmartTableToolbarContent sapMBarChild')
-					this.hideElement('sapUiCompVarMngmt sapMBarChild')
-				}, 1)
-			},
-			
-			hideElement: function(className) {
-				let elements = document.getElementsByClassName(className)
-				if(elements && elements.length > 0) elements[0].style.display = 'none'
-			},
-
 			onDisplayPress: function(event) {
 				MessageToast.show("display")
 			},
 
 			onEditPress: function(event) {
 				MessageToast.show("edit")
-			}
+			},
+			openPageDetailsDialog: function() {
+                var view = this.getView()
+
+                if (!this.createDialog) {
+                    this.createDialog = Fragment.load({
+                        id: view.getId(),
+                        name: "namespace.studies.view.fragments.PageDetailsDialog",
+                        controller: this
+                    }).then(dialog => {
+                        view.addDependent(dialog)
+                        return dialog
+                    })
+                } 
+
+                this.createDialog.then(dialog => dialog.open())
+            },
 		});
 	});

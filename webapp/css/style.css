@@ -2,9 +2,10 @@
  * Begin of styles for SmartTable
  */
 
-/* .sapUiCompVarMngmt .sapMBarChild {
-    display: 'none';
-} */
+.sapUiCompSmartTableToolbarContent>.sapMBtnInner.sapMBtnHoverable.sapMFocusable.sapMBtnIconFirst.sapMBtnDefault,
+.sapUiCompVarMngmt.sapMBarChild {
+    display: none;
+}
 
 .tinyButtons .sapMBtn {
     height: 1.6rem;

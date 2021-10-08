@@ -55,8 +55,8 @@
                     <Label text="Actions" />
                     <table:template>
                         <HBox renderType="Bare" class="tinyButtons">
-                            <Button class="btnTinyLineHeight" icon="sap-icon://display" tooltip="display" press="onDisplayPress"/>
-                            <Button icon="sap-icon://edit" tooltip="edit" press="onEditPress"/>
+                            <Button class="smartTableButton btnTinyLineHeight" icon="sap-icon://display" tooltip="display" press="onDisplayPress"/>
+                            <Button class="smartTableButton" icon="sap-icon://edit" tooltip="edit" press="onEditPress"/>
                         </HBox>
                     </table:template>
                 </table:Column>
@@ -82,6 +82,14 @@
             </table:Table>
 
         </smartTable:SmartTable>
-        
+
+        <footer>
+            <Toolbar>
+                <Button
+                    press="openPageDetailsDialog"
+                    text="Important info about this page"
+                    type="Critical"/>
+            </Toolbar>
+        </footer>        
 	</Page>
 </mvc:View>
